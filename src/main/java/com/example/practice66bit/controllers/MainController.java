@@ -44,4 +44,9 @@ public class MainController {
         playerService.addPlayer(player);
         return "redirect:/all";
     }
+
+    @GetMapping("/aaa")
+    public String aaa() {
+        return "allPlayers";
+    }
 }
