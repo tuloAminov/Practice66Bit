@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>addPlayer</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Добаление игрока</h1>
+    <form method="post" th:action="@{/add}" th:object="${player}">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" placeholder="name" th:field="*{name}">
+                    <p th:if="${#fields.hasErrors('name')}">field value cannot be empty</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="surname" th:field="*{surname}">
+                    <p th:if="${#fields.hasErrors('surname')}">field value cannot be empty</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="gender" th:field="*{gender}">
+                    <p th:if="${#fields.hasErrors('gender')}">field value cannot be empty</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="dateOfBirth" th:field="*{dateOfBirth}">
+                    <p th:if="${#fields.hasErrors('dateOfBirth')}">field value cannot be empty</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="team" th:field="*{team}">
+                    <p th:if="${#fields.hasErrors('team')}">field value cannot be empty</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="country" th:field="*{country}">
+                    <p th:if="${#fields.hasErrors('country')}">field value cannot be empty</p>
+                </td>
+                <td>
+                    <input type="submit" placeholder="save">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
