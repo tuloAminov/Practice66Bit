@@ -76,14 +76,10 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", gender='" + gender + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", team='" + team + '\'' +
-                ", country='" + country + '\'' +
-                '}';
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(name).append(", ").append(surname).append(", ").append(gender)
+                .append(", ").append(dateOfBirth).append(", ").append(team).append(", ").append(country);
+        return stringBuilder.toString();
     }
+
 }

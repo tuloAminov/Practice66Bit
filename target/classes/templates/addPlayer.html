@@ -2,11 +2,27 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>addPlayer</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Add player</title>
 </head>
 <body>
+<header class = "header">
+    <div class="container">
+        <div class="header-inner">
+            <br><a class="menu-link" href="/add">Добавить игрока</a>
+        </div>
+    </div>
+</header> <br><br><br><br><br>
 
 <div class="container">
+    <div class = "head-block"></div>
+    <div class = "line"></div>
+    <div class="name"></div>
+
     <h1>Добаление игрока</h1>
     <form method="post" th:action="@{/add}" th:object="${player}">
         <table>
